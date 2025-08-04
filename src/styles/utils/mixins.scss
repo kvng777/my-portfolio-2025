@@ -1,0 +1,121 @@
+//*** Responsive breakpoints ***//
+$mobile-m-bp: 425px; // below portrait
+$mobile-bp: 599px; // mobile
+$tablet-bp: 767px; // tablet medium
+$tablet-md: 991px; // tablet medium
+$tablet-l-bp: 1080px; // below landscape
+$desktop-bp: 1024px; // below mini desktop
+$desktop-sm-bp: 1199px; // below small desktop
+$desktop-md-bp: 1439px; // below middle desktop
+
+//* for iphone 5s/se1
+@mixin mobile-m {
+  @media screen and (max-width: $mobile-m-bp) {
+    @content;
+  }
+}
+
+@mixin mobile {
+  @media screen and (max-width: $mobile-bp) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media screen and (max-width: $tablet-bp) {
+    @content;
+  }
+}
+@mixin tablet-md {
+  @media screen and (max-width: $tablet-md) {
+    @content;
+  }
+}
+
+@mixin tablet-l {
+  @media screen and (max-width: $tablet-l-bp) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media screen and (max-width: $desktop-bp) {
+    @content;
+  }
+}
+
+@mixin desktop-sm {
+  @media screen and (max-width: $desktop-sm-bp) {
+    @content;
+  }
+}
+
+@mixin desktop-l {
+  @media screen and (max-width: $desktop-md-bp) {
+    @content;
+  }
+}
+
+@mixin link($color) {
+  & {
+    color: $color;
+    text-decoration: none;
+    @content;
+    &:visited,
+    &:active,
+    &:focus {
+      color: $color;
+    }
+  }
+}
+
+@mixin scrollBarBlue {
+  // For Firefox
+  & {
+    scrollbar-width: thin; /* Makes scrollbar thinner */
+    scrollbar-color: var(--ocean-midnight-300) transparent;
+  }
+
+  // For WebKit-based browsers (Chrome, Safari, etc.)
+  &::-webkit-scrollbar {
+    width: 4px;
+    border-radius: 8px;
+    height: 4px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  &::-webkit-scrollbar-thumb {
+    border-radius: 0;
+    -webkit-box-shadow: inset 0 0 4px rgba(0, 0, 0, 0.3);
+    background-color: #0b0a0a;
+  }
+  &::-webkit-scrollbar-thumb:hover {
+    background: #0056b3;
+  }
+}
+
+@mixin scrollBarGrey {
+  /* For WebKit-based browsers (Chrome, Safari, etc.) */
+  &::-webkit-scrollbar {
+    width: 4px;
+    height: 4px;
+  }
+
+  &::-webkit-scrollbar-track {
+    border: 2px solid red;
+    background: var(--primary-white);
+  }
+
+  &::-webkit-scrollbar-thumb {
+    border: 2px solid red;
+    background-color: var(--primary-white);
+    border-radius: 6px;
+    border: 4px solid var(--primary-white);
+  }
+
+  /* For Firefox */
+  scrollbar-width: thin; /* Makes scrollbar thinner */
+  scrollbar-color: rgba(0, 0, 0, 0.3) rgba(0, 0, 0, 0.1); /* Thumb color and track color */
+}

@@ -2,17 +2,28 @@
 
 import React from 'react'
 import styles from './Header.module.scss'
-import cn from 'classnames'
+import { useTheme } from 'next-themes'
+import { CgDarkMode } from "react-icons/cg";
 
 export const Header = () => {
+
+  const {theme, setTheme} = useTheme();
+
   return (
     <div className={styles.el}>
-      <ul>
-        <li>logo</li>
-        <li>NavLink1</li>
-        <li>NavLink2</li>
-        <li>NavLink3</li>
-      </ul>
+      {/* <button onClick={() => setTheme('light')}><CiLight /></button>
+      <button onClick={() => setTheme('dark')}><MdDarkMode /></button> */}
+      <button 
+        onClick={() => {
+          if(theme === 'dark') {
+            setTheme('light')
+          } else {
+            setTheme('dark')
+          }
+        }}
+      >
+        <CgDarkMode />
+      </button>
     </div>
   )
 }

@@ -1,0 +1,13 @@
+@use '@/styles/utils/mixins.scss' as *;
+
+.el {
+  .container {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    @include tablet {
+      flex-direction: column;
+      gap: 8px;
+    }
+  }
+}

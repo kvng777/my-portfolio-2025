@@ -1,0 +1,64 @@
+@use '@/styles/utils/mixins.scss' as *;
+
+.accEl {
+  width: 100%;
+  position: relative;
+  padding-bottom: 20px;
+  &:last-of-type {
+    padding-bottom: 0;
+  }
+
+  .line {
+    z-index: 1;
+    position: absolute;
+    left: 11px;
+    width: 1px;
+    height: 100%;
+  }
+  &:last-of-type {
+    .line {
+      display: none;
+    }
+  }
+
+  .head {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 4px;
+    cursor: pointer;
+    .textWrapper {
+      text-align: left;
+      display: flex;
+      flex-direction: row;
+      .icon {
+        margin-right: 8px;
+        margin-top: 0;
+        background-color: rgb(242, 239, 239);
+        border-radius: 4px;
+        position: relative;
+        z-index: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        svg { 
+          height: 20px;
+          width: 20px;
+        }
+      }
+    }
+    .icon,
+    svg {
+      height: 24px;
+      width: 24px;
+      margin: auto 0;
+    }
+  }
+
+  .slideDown {
+    padding-left: 38px;
+    // margin-top: 12px;
+    // padding-top: 12px;
+  }
+}
