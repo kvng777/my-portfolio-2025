@@ -13,6 +13,8 @@ import useThemeColor from '@/hooks/useThemeColor'
 
 export const Stack = () => {
 
+  const themeColor = useThemeColor();
+
   const stackData = [
     {
       name:'nextjs2',
@@ -85,7 +87,7 @@ export const Stack = () => {
                 >
                   <StackIcon 
                     name={item.name} 
-                    variant={useThemeColor() === 'dark' || isGsap ? 'dark' : "light"}
+                    variant={themeColor === 'dark' || isGsap ? 'dark' : "light"}
                   />
                 </div>
               )

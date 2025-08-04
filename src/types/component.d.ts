@@ -19,9 +19,9 @@ export interface IHeader {
   navigation?: {
     items: ICta[];
   };
-  search?: {
-    items: any[];
-  }
+  // search?: {
+  //   items: any[];
+  // }
 }
 
 //  Footer
@@ -108,9 +108,9 @@ export interface IBigCard {
   cTA?: {
     items: ICta[];
   };
-  cards?: {
-    items: any[];
-  };
+  // cards?: {
+  //   items: any[];
+  // };
 }
 
 //  Carousel Cards

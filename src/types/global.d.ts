@@ -1,14 +1,14 @@
 export interface IImage {
   src: string;
-  focalPoint: any;
+  // focalPoint: any;
   crops?: TCrop[];
   id: string;
   name: string;
   mediaType: string;
   url: string;
   extension: string;
-  width: any;
-  height: any;
+  // width: any;
+  // height: any;
   bytes: number;
   alt: string;
 }
@@ -22,12 +22,12 @@ export interface ISortSet {
 
 export interface ILink {
   url: string;
-  queryString?: any;
+  // queryString?: any;
   title: string;
-  target: any;
-  destinationId?: any;
-  destinationType?: any;
-  route?: any;
+  // target: any;
+  // destinationId?: any;
+  // destinationType?: any;
+  // route?: any;
   linkType?: string;
   display?: boolean;
   content?: string | {
@@ -63,23 +63,23 @@ export interface IRoute {
   startItem: IStartItem;
 }
 
-export interface ICta {
-  content: any;
-  items: {
-    content: {
-      properties: {
-        iconID?: string;
-        text?: string;
-        link?: ILink[];
-        // trackID?: string;
-        display?: boolean;
-      };
-    };
-  }[];
-}
+// export interface ICta {
+//   content: any;
+//   items: {
+//     content: {
+//       properties: {
+//         iconID?: string;
+//         text?: string;
+//         link?: ILink[];
+//         // trackID?: string;
+//         display?: boolean;
+//       };
+//     };
+//   }[];
+// }
 
 export interface ICtaImage {
-  content: any;
+  // content: any;
   items: {
     content: {
       properties: {

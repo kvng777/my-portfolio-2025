@@ -17,6 +17,6 @@ export interface IPage {
   };
   contentType: string;
   contents?: IBanner[];
-  properties?: any;
+  // properties?: any;
   pageTitle?: string;
 }

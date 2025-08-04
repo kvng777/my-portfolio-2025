@@ -1,4 +1,4 @@
-import { ILink } from '@/types/global';
+// import { ILink } from '@/types/global';
 
 export const checkMediaUrl = (link: string) => {
   const images = [
@@ -57,35 +57,35 @@ export const isExternalLink = (url: string) => {
   return pattern.test(url);
 };
 
-export const linkToParams = (link: any) => {
-  if (link) {
-    const thisLink: ILink = link.length > 0 ? link[0] : link;
-    let href: string = '';
-    switch (thisLink.linkType) {
-      case 'Content':
-        href = thisLink.route.path;
-        break;
-      case 'External':
-      case 'Media': // TODO: Kevin - for handling PDF downloads
-        href = thisLink.url;
-        break;
-    }
-    if (thisLink.queryString) {
-      href = `${href}${thisLink.queryString}`;
-    }
-    return {
-      href,
-      linktype: thisLink.linkType,
-      target: thisLink.target,
-      querystring: thisLink.queryString,
-    };
-  }
-  return {
-    href: '',
-    linkType: '',
-    querystring: '',
-  };
-};
+// export const linkToParams = (link: any) => {
+//   if (link) {
+//     const thisLink: ILink = link.length > 0 ? link[0] : link;
+//     let href: string = '';
+//     switch (thisLink.linkType) {
+//       case 'Content':
+//         href = thisLink.route.path;
+//         break;
+//       case 'External':
+//       case 'Media': // TODO: Kevin - for handling PDF downloads
+//         href = thisLink.url;
+//         break;
+//     }
+//     if (thisLink.queryString) {
+//       href = `${href}${thisLink.queryString}`;
+//     }
+//     return {
+//       href,
+//       linktype: thisLink.linkType,
+//       target: thisLink.target,
+//       querystring: thisLink.queryString,
+//     };
+//   }
+//   return {
+//     href: '',
+//     linkType: '',
+//     querystring: '',
+//   };
+// };
 
 export const removeHtmlEntitiesFromStr = (str: string) =>
   str?.replace(/&(?:[a-z]+|#\d+);/g, '');
