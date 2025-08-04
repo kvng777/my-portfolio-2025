@@ -24,7 +24,9 @@ export const HeroBanner = () => {
               src={ProfilePic}
               width={200}
               height={200}
+              placeholder="blur"
               alt="Profile picture"
+              priority
             />
             <div
               data-tooltip-id="flag"

@@ -37,7 +37,14 @@ export const CardImage = ({
     >
       <div className={styles.innerWrapper}>
         <div className={styles.bgImage}>
-          <Image src={img.url.src} width={800} height={800} alt={"alt image"} />
+          <Image 
+            src={img.url.src} 
+            width={800} 
+            height={800} 
+            alt={"alt image"}
+            priority
+            placeholder="blur"
+          />
         </div>
         <div
           className={styles.content}
