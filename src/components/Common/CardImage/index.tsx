@@ -43,7 +43,7 @@ export const CardImage = ({
             height={800} 
             alt={"alt image"}
             priority
-            placeholder="blur"
+            // placeholder="blur"
           />
         </div>
         <div

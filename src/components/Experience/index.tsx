@@ -53,7 +53,6 @@ export const Experience = () => {
       responsibilities: [
         "Conducted manual testing for web and mobile applications to identify bugs, usability issues, and performance bottlenecks.",
         "Created and executed detailed test plans, test cases, and documentation to ensure full coverage of functional requirements.",
-        "Collaborated with developers and project managers to troubleshoot issues and verify timely fixes before release.",
         "Performed regression, functional, and user acceptance testing (UAT) to maintain software quality standards.",
         "Reported and tracked defects using tools like JIRA, ensuring clear communication and faster resolution."
       ],
