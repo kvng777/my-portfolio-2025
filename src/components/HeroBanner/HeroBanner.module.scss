@@ -107,6 +107,19 @@
           margin: auto 0;
         }
       }
+      .resume {
+        // border: 1px solid blue;
+        width: fit-content;
+        display: flex;
+        gap: 8px;
+        padding-left: 8px;
+        // padding: 6px 8px;
+        // text-decoration: underline;
+        // border-bottom: 1px solid blue;
+        &:hover {
+          text-decoration: underline;
+        }
+      }
     } 
 
     li {

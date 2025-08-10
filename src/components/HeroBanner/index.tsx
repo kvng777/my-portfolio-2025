@@ -12,6 +12,7 @@ import { MdOutlineLanguage } from "react-icons/md";
 import "flag-icons/css/flag-icons.min.css";
 import { Tooltip as ReactTooltip } from "react-tooltip";
 import ShinyText from "../Animations/ShinyText/ShinyText";
+import { MdOutlineSimCardDownload } from "react-icons/md";
 
 export const HeroBanner = () => {
   return (
@@ -69,7 +70,27 @@ export const HeroBanner = () => {
             <li>
               <MdOutlineLanguage /> English, Chinese, Tagalog
             </li>
+            {/* <li>
+              <MdOutlineSimCardDownload />
+              <a
+                href="/resume.pdf"
+                target="_blank"
+              >
+                Resume
+              </a>
+            </li> */}
           </ul>
+
+          {/* <div className={styles.resume}> */}
+            
+            <a
+              className={styles.resume}
+              href="/resume.pdf"
+              target="_blank"
+            >
+              <MdOutlineSimCardDownload />
+              Resume
+            </a>
         </div>
       </div>
     </div>

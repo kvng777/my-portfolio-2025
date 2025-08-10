@@ -7,7 +7,9 @@ import LeftText from "../Common/LeftText";
 import { IoLogoWechat } from "react-icons/io5";
 import { HiOutlineDevicePhoneMobile } from "react-icons/hi2";
 import { MdAlternateEmail } from "react-icons/md";
-import { MdOutlineSimCardDownload } from "react-icons/md";
+import { FaLinkedinIn } from "react-icons/fa";
+
+// import { MdOutlineSimCardDownload } from "react-icons/md";
 
 export const Contact = () => {
   const [isPopoverOpen, setIsPopoverOpen] = useState(false);
@@ -32,7 +34,7 @@ export const Contact = () => {
   return (
     <div className={cn(styles.el, "padding-outter")}>
       <div className={cn(styles.container, "padding-inner", "inner")}>
-        <LeftText text="contact" />
+        <LeftText text="Contact" />
 
         <div className={styles.right}>
           <ul>
@@ -67,12 +69,12 @@ export const Contact = () => {
               </a>
             </li>
             <li>
-              <MdOutlineSimCardDownload />
+              <FaLinkedinIn />
               <a
-                href="https://www.rd.usda.gov/sites/default/files/pdf-sample_0.pdf"
+                href="https://www.linkedin.com/in/kvngamboa/"
                 target="_blank"
               >
-                Resume
+                /kvngamboa
               </a>
             </li>
           </ul>

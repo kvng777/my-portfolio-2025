@@ -17,7 +17,7 @@ export const Experience = () => {
       position: "Front-end Web Developer",
       year: "2021 - 2025",
       responsibilities: [
-        "Contributed to the development of responsive, mobile-first websites and web applications using React.js, Next.js, and Redux.",
+        "Contributed to the development of responsive, mobile-first websites and web applications using React.js/Next.js.",
         "Ensured dynamic content delivery, performance optimization, and user-friendly experiences across devices.",
         "Built and maintained reusable front-end components to streamline development and improve scalability.",
         "Collaborated with designers, back-end developers, and testers to deliver high-quality digital solutions.",

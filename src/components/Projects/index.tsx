@@ -16,7 +16,7 @@ import LeftText from '../Common/LeftText'
 import imgApa from '../../../public/image/projects/apa.png';
 import imgBodw from '../../../public/image/projects/bodw.png';
 import imgJcg from '../../../public/image/projects/jcg.png';
-import imgWtc from '../../../public/image/projects/wtc.png';
+import imgIsb from '../../../public/image/projects/isb.png';
 
 export const Projects = () => {
 
@@ -28,7 +28,7 @@ export const Projects = () => {
   //       - SmartLinks to handle different type of links <br>
   //       - WCAG compliance + Semanatic UI for SEO efficiency <br>
   const projectSectionDescription = `
-        At Landor, I contributed to building client-facing websites, web applications, and interactive kiosks focused on performance and user experience. Our work involved developing reusable front-end components, integrating APIs for dynamic content, and implementing advanced navigation systems for intuitive browsing. We also emphasized accessibility (WCAG compliance), semantic markup, and SEO-friendly structures to ensure our digital solutions were inclusive, scalable, and optimized for discovery.
+        At Landor, I developed numerous websites, web applications, and interactive kiosks using React.js and Next.js, with a strong focus on performance, accessibility, and user experience. I built reusable front-end components, integrated APIs for dynamic content, and implemented advanced navigation systems, ensuring our solutions were scalable, inclusive, and SEO-optimized.
   `;
   const myProjectsData= [
     {
@@ -52,9 +52,9 @@ export const Projects = () => {
       },
       title: 'Bodw',
       subtitle: 'Something Bodw',
-      description: `Landor & Fitch designed a minimal and modular system to help content discovery and navigation, minimizing design effects that are distracting.`,
+      description: `Landor designed a minimal and modular system to help content discovery and navigation, minimizing design effects that are distracting.`,
       cta: {
-        url: 'www.bodw.com',
+        url: 'https://www.bodw.com/en',
         text: 'Click to see'
       },
     },
@@ -72,13 +72,13 @@ export const Projects = () => {
     },
     {
       img: {
-        url: imgWtc,
+        url: imgIsb,
       },
-      title: 'WTC',
-      subtitle: 'Something Jcg',
-      description: `Built a dynamic digital directory for both shoppers and businesses, AI powered search assistance, queueing system, interactive wayfinding.`,
+      title: 'ISB',
+      subtitle: 'Something ISB',
+      description: `Collaborated on the development and maintenance of ISB’s official website, ensuring a seamless user experience through responsive design and dynamic content integration.`,
       cta: {
-        url: '',
+        url: 'https://www.isb.edu/',
         text: 'Click to see'
       },
     },

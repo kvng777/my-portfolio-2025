@@ -50,6 +50,7 @@
     .bgImage {
       overflow: hidden;
       img {
+        aspect-ratio: 425/240;
         transform: scale(1);
         display: flex;
         object-fit: cover;
