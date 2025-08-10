@@ -81,8 +81,6 @@ export const HeroBanner = () => {
             </li> */}
           </ul>
 
-          {/* <div className={styles.resume}> */}
-            
             <a
               className={styles.resume}
               href="/resume.pdf"
