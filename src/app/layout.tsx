@@ -4,6 +4,7 @@ import "../styles/globals.scss";
 // import Header from "@/components/Header";
 import { ThemeProvider } from 'next-themes'
 // import { Providers } from "./providers";
+import { SpeedInsights } from "@vercel/speed-insights/next"
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -39,6 +40,7 @@ export default function RootLayout({
             {/* <Providers>{children}</Providers> */}
             {children}
         </ThemeProvider>
+        <SpeedInsights />
       </body>
     </html>
   );
