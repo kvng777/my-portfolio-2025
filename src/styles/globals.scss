@@ -24,6 +24,11 @@
   --toastify-color-progress-light: #353935;
   --color-matteblack: #28282B;
   --color-onyx: #303030;
+
+  // LangSwitcher theme variables
+  --lang-toggle-bg: #fefefe;
+  --lang-toggle-circle: #fff;
+  --component-bg: var(--background);
 }
 
 [data-theme='dark'] {
@@ -31,6 +36,10 @@
   --background: var(--color-matteblack);
   --text-color: #fefefe;
   --dash-color: #4d4d4d;
+
+  --lang-toggle-bg: #222;
+  --lang-toggle-circle: #444;
+  --component-bg: var(--color-onyx);
 }
 
 html,
@@ -56,7 +65,6 @@ body {
 }
 
 .inner {
-  // border: 1px solid red;
   max-width: var(--max-width);
   margin: 0 auto;
   background-color: var(--bg-color-inner);
@@ -65,7 +73,6 @@ body {
     margin: 0 auto;
     background-color: unset;
   }
-  // margin-bottom: 16px;
 }
 
 button,

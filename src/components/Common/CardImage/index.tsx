@@ -14,7 +14,6 @@ type ICard = {
     };
   };
   title: string;
-  subtitle: string;
   description: string;
   cta: {
     url: string;
@@ -25,10 +24,10 @@ type ICard = {
 export const CardImage = ({
   img,
   title,
-  // subtitle,
   description,
   cta,
 }: ICard) => {
+
   return (
     <a
       className={cn(styles.CardEl, cta.url ? "" : styles.noLink)}
@@ -60,9 +59,7 @@ export const CardImage = ({
             {cta.url && <PiArrowUpRightLight />}
           </div>
 
-          {/* <p>{description}</p> */}
           <div
-            // className="body3Regular"
             dangerouslySetInnerHTML={{
               __html: description,
             }}

@@ -99,4 +99,3 @@ export const stringToKey = (str: string) => {
   str = str.toLowerCase();
   return str;
 };
-

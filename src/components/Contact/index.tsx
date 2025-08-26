@@ -8,12 +8,15 @@ import { IoLogoWechat } from "react-icons/io5";
 import { HiOutlineDevicePhoneMobile } from "react-icons/hi2";
 import { MdAlternateEmail } from "react-icons/md";
 import { FaLinkedinIn } from "react-icons/fa";
+import { useTranslations } from 'next-intl';
 
 // import { MdOutlineSimCardDownload } from "react-icons/md";
 
 export const Contact = () => {
   const [isPopoverOpen, setIsPopoverOpen] = useState(false);
   const [isCopied, setIsCopied] = useState(false);
+
+  const t = useTranslations("Contact");
 
   const copyToClipboard = async (text: string) => {
     try {
@@ -34,7 +37,7 @@ export const Contact = () => {
   return (
     <div className={cn(styles.el, "padding-outter")}>
       <div className={cn(styles.container, "padding-inner", "inner")}>
-        <LeftText text="Contact" />
+        <LeftText text={t('title')}/>
 
         <div className={styles.right}>
           <ul>

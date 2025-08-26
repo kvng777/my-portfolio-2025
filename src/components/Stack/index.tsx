@@ -10,10 +10,13 @@ import StackIcon from "tech-stack-icons";
 import MotionIcon from '../../../public/icons/motionicon.png'
 import { Tooltip as ReactTooltip } from "react-tooltip";
 import useThemeColor from '@/hooks/useThemeColor'
+import { useTranslations } from 'next-intl';
 
 export const Stack = () => {
 
   const themeColor = useThemeColor();
+
+  const t = useTranslations("Stack");
 
   const stackData = [
     {
@@ -73,7 +76,7 @@ export const Stack = () => {
   return (
     <div className={cn(styles.el, 'padding-outter')}>
       <div className={cn(styles.container, 'padding-inner', 'inner')}>
-        <LeftText text='Stack' />
+        <LeftText text={t('title')}/>
 
         <div className={styles.right}>
           { stackData && stackData.map((item, id) => {

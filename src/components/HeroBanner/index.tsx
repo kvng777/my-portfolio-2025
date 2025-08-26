@@ -13,8 +13,12 @@ import "flag-icons/css/flag-icons.min.css";
 import { Tooltip as ReactTooltip } from "react-tooltip";
 import ShinyText from "../Animations/ShinyText/ShinyText";
 import { MdOutlineSimCardDownload } from "react-icons/md";
+import { useTranslations } from 'next-intl';
+import LangSwitcher from "../LangSwitcher";
 
 export const HeroBanner = () => {
+  const t = useTranslations('HeroBanner');
+
   return (
     <div className={cn(styles.el, "padding-outter")}>
       <div className={cn(styles.container, "padding-inner", "inner")}>
@@ -39,14 +43,20 @@ export const HeroBanner = () => {
           </div>
         </div>
 
-        <div className={styles.darkModeToggler}>
-          <DarkMode />
+        <div className={styles.settings}>
+          <div className={styles.langSwitcher}>
+            <LangSwitcher />
+          </div>
+          
+          <div className={styles.darkMode}>
+            <DarkMode/>
+          </div>
         </div>
 
         <div className={styles.info}>
           <div className={styles.titleWrapper}>
             <div className={styles.nameFlagWrapper}>
-              <h1>Kevin Gamboa</h1>
+              <h1>{t('name')}</h1>
               <div className={styles.pulseWrapper}>
                 <span className={styles.pulse} />
                 <ShinyText
@@ -62,33 +72,24 @@ export const HeroBanner = () => {
 
           <ul className={styles.infoTag}>
             <li>
-              <RiComputerLine /> Front-end Web Developer
+              <RiComputerLine /> {t('role')}
             </li>
             <li>
-              <IoLocationOutline /> Shanghai, China
+              <IoLocationOutline /> {t('location')}
             </li>
             <li>
-              <MdOutlineLanguage /> English, Chinese, Tagalog
+              <MdOutlineLanguage /> {t('language')}
             </li>
-            {/* <li>
-              <MdOutlineSimCardDownload />
-              <a
-                href="/resume.pdf"
-                target="_blank"
-              >
-                Resume
-              </a>
-            </li> */}
           </ul>
 
-            <a
-              className={styles.resume}
-              href="/resume.pdf"
-              target="_blank"
-            >
-              <MdOutlineSimCardDownload />
-              Resume
-            </a>
+          <a
+            className={styles.resume}
+            href="/resume.pdf"
+            target="_blank"
+          >
+            <MdOutlineSimCardDownload />
+            {t('resume')}
+          </a>
         </div>
       </div>
     </div>

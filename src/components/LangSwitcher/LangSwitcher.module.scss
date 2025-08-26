@@ -1,0 +1,14 @@
+
+.ElLangSwitcher{
+  margin: 16px;
+  margin-right: 0;
+  a {
+    display: flex;
+    flex-direction: row;
+    width: fit-content;
+    align-items: center;
+    p {
+      min-width: 32px;
+    }
+  }  
+}

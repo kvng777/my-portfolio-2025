@@ -11,8 +11,6 @@ export const Header = () => {
 
   return (
     <div className={styles.el}>
-      {/* <button onClick={() => setTheme('light')}><CiLight /></button>
-      <button onClick={() => setTheme('dark')}><MdDarkMode /></button> */}
       <button 
         onClick={() => {
           if(theme === 'dark') {
