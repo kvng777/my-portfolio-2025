@@ -8,6 +8,7 @@ import Contact from "@/components/Contact";
 import Experience from "@/components/Experience";
 import Footer from "@/components/Footer";
 import Spacer from "@/components/Common/Spacer";
+import BackToTop from "@/components/Common/BackToTop";
 
 export default function Home() {
   return (
@@ -26,6 +27,7 @@ export default function Home() {
       <Contact />
       <Spacer />
       <Footer />
+      <BackToTop />
     </main>
   );
 }

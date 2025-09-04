@@ -7,6 +7,7 @@ import LeftText from '../Common/LeftText';
 import 'react-slidedown/lib/slidedown.css';
 import Accordion from '../Common/Accordion';
 import { useTranslations } from 'next-intl';
+import { animate } from '@/utils/Animate';
 
 type IExpierence = {
   company: string;
@@ -27,16 +28,18 @@ export const Experience = () => {
       <div className={cn(styles.container, 'padding-inner', 'inner')}>
         <LeftText text={t('title')}/>
         
-        <div className={styles.right}>
-          {
-            experienceData && experienceData.map((acc: IExpierence, id: number) => {
-              return (
-                <Accordion {...acc} key={id} id={id}/>
+        {animate(
+          <div className={styles.right}>
+            {
+              experienceData && experienceData.map((acc: IExpierence, id: number) => {
+                return (
+                  <Accordion {...acc} key={id} id={id}/>
+                )
+              }
               )
             }
-            )
-          }
-        </div>
+          </div>
+        )}
       </div>
     </div>
   )

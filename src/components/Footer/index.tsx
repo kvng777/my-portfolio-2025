@@ -1,6 +1,7 @@
 import React from 'react'
 import styles from './Footer.module.scss';
 import cn from 'classnames'
+import { animate } from '@/utils/Animate';
 
 export const Footer = () => {
   return (

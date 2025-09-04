@@ -9,6 +9,7 @@ import { HiOutlineDevicePhoneMobile } from "react-icons/hi2";
 import { MdAlternateEmail } from "react-icons/md";
 import { FaLinkedinIn } from "react-icons/fa";
 import { useTranslations } from 'next-intl';
+import { animate } from "@/utils/Animate";
 
 // import { MdOutlineSimCardDownload } from "react-icons/md";
 
@@ -39,7 +40,7 @@ export const Contact = () => {
       <div className={cn(styles.container, "padding-inner", "inner")}>
         <LeftText text={t('title')}/>
 
-        <div className={styles.right}>
+        {animate(<div className={styles.right}>
           <ul>
             <li>
               <button onClick={handleWechatClick}>
@@ -82,6 +83,7 @@ export const Contact = () => {
             </li>
           </ul>
         </div>
+        )}
       </div>
     </div>
   );

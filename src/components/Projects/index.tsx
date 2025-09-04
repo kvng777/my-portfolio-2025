@@ -18,6 +18,7 @@ import imgBodw from '../../../public/image/projects/bodw.png';
 import imgJcg from '../../../public/image/projects/jcg.png';
 import imgIsb from '../../../public/image/projects/isb.png';
 import { useTranslations } from 'next-intl';
+import { animate } from '@/utils/Animate';
 
 export const Projects = () => {
 
@@ -70,6 +71,7 @@ export const Projects = () => {
     <div className={cn(styles.el, 'padding-outter')}>
       <div className={cn(styles.container, 'padding-inner', 'inner')}>
         <LeftText text={t('title')}/>
+        {animate(
         <div className={styles.right}>
           <p>{t('description')}</p>
           {
@@ -85,6 +87,7 @@ export const Projects = () => {
             }) 
           }
         </div>
+        )}
       </div>
     </div>
   )

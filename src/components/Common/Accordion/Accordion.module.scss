@@ -48,17 +48,28 @@
         }
       }
     }
+
     .icon,
     svg {
       height: 24px;
       width: 24px;
       margin: auto 0;
     }
+
+    .chevron {
+      svg {
+        transition: transform 0.3s ease;  
+      }
+
+      &.rotate {
+        svg {
+          transform: rotate(-180deg);
+        }
+      }
+    }
   }
 
   .slideDown {
     padding-left: 38px;
-    // margin-top: 12px;
-    // padding-top: 12px;
   }
 }

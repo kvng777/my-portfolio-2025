@@ -5,6 +5,8 @@ import styles from './About.module.scss'
 import LeftText from '../Common/LeftText'
 import cn from 'classnames'
 import { useTranslations } from 'next-intl';
+import { motion } from "motion/react"
+import { animate } from '@/utils/Animate'
 
 export const About = () => {
 
@@ -15,10 +17,12 @@ export const About = () => {
       <div className={cn(styles.container, 'padding-inner', 'inner')}>
         <LeftText text={t('title')}/>
 
-        <div className={styles.right}>
-          <p>
-            {t('description')}
-          </p>
+        <div className={styles.right}>          
+          {animate(
+            <p>
+              {t('description')}
+            </p>
+          )}
         </div>
       </div>
     </div>

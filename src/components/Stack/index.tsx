@@ -11,11 +11,12 @@ import MotionIcon from '../../../public/icons/motionicon.png'
 import { Tooltip as ReactTooltip } from "react-tooltip";
 import useThemeColor from '@/hooks/useThemeColor'
 import { useTranslations } from 'next-intl';
+import { motion } from "motion/react"
+import { animate } from '@/utils/Animate'
 
 export const Stack = () => {
 
   const themeColor = useThemeColor();
-
   const t = useTranslations("Stack");
 
   const stackData = [
@@ -76,39 +77,41 @@ export const Stack = () => {
   return (
     <div className={cn(styles.el, 'padding-outter')}>
       <div className={cn(styles.container, 'padding-inner', 'inner')}>
+
         <LeftText text={t('title')}/>
 
-        <div className={styles.right}>
-          { stackData && stackData.map((item, id) => {
-            const isGsap = item.value === 'GSAP';
-            return (
-                <div 
-                  key={id}
-                  data-tooltip-id="techstack"
-                  data-tooltip-content={item.value}
-                  data-tooltip-place="top"
-                >
-                  <StackIcon 
-                    name={item.name} 
-                    variant={themeColor === 'dark' || isGsap ? 'dark' : "light"}
-                  />
-                </div>
-              )
-            })
-          }
-          <Image
-            src={MotionIcon}
-            width={100}
-            height={100}
-            alt={'logo of motion'}
-            data-tooltip-id="techstack-motion"
-            data-tooltip-content="motion"
-            data-tooltip-place="top"
-          />
-          <ReactTooltip id="techstack" />
-          <ReactTooltip id="techstack-motion" />
-
-        </div>
+        {animate(
+          <div className={styles.right}>
+            { stackData && stackData.map((item, id) => {
+              const isGsap = item.value === 'GSAP';
+              return (
+                  <div 
+                    key={id}
+                    data-tooltip-id="techstack"
+                    data-tooltip-content={item.value}
+                    data-tooltip-place="top"
+                  >
+                    <StackIcon 
+                      name={item.name} 
+                      variant={themeColor === 'dark' || isGsap ? 'dark' : "light"}
+                    />
+                  </div>
+                )
+              })
+            }
+            <Image
+              src={MotionIcon}
+              width={100}
+              height={100}
+              alt={'logo of motion'}
+              data-tooltip-id="techstack-motion"
+              data-tooltip-content="motion"
+              data-tooltip-place="top"
+            />
+            <ReactTooltip id="techstack" />
+            <ReactTooltip id="techstack-motion" />
+          </div>
+      )}
       </div>
     </div>
   )

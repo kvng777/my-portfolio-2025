@@ -7,7 +7,6 @@ import { SlideDown } from 'react-slidedown';
 import styles from './Accordion.module.scss'
 import 'react-slidedown/lib/slidedown.css';
 import { VscCode } from "react-icons/vsc";
-import { gsap } from 'gsap';
 
 type IAccordion = {
   id: number;
@@ -33,6 +32,10 @@ export const Accordion = (
 
   const [themeColor, setThemeColor] = useState('');
   const [isOpen, setIsOpen] = useState(id === 0);
+
+  const pathRef = useRef(null); 
+  const chevronDown = "M6 9l6 6 6-6";
+  const chevronUp = "M18 15l-6-6-6 6";
   
   useEffect(() => {
     if(theme) {
@@ -40,22 +43,10 @@ export const Accordion = (
     }
   }, [theme])
 
-  useEffect(() => {
-    // Ensure animation happens only after pathRef is available
-    if (pathRef.current) {
-      const initialPath = isOpen ? chevronUp : chevronDown;
-      gsap.set(pathRef.current, { attr: { d: initialPath } });  // Set initial path
-    }
-  }, [isOpen]);
-
-  const pathRef = useRef(null); 
-
-  const chevronDown = "M6 9l6 6 6-6";
-  const chevronUp = "M18 15l-6-6-6 6";
 
   const toggleAccordion = () => {
     const newPath = isOpen ? chevronDown : chevronUp;
-    gsap.to(pathRef.current, { duration: 0.3, attr: { d: newPath } });  // Animate 'd' attribute
+    // gsap.to(pathRef.current, { duration: 0.3, attr: { d: newPath } });  // Animate 'd' attribute
     setIsOpen(prev => !prev);  // Toggle the state
   };
 
@@ -70,7 +61,7 @@ export const Accordion = (
         className="w-5 h-5"
       >
         <path
-          ref={pathRef}
+          // ref={pathRef}
           strokeLinecap="round"
           strokeLinejoin="round"
           d={chevronDown}
@@ -85,7 +76,6 @@ export const Accordion = (
       <button
         type='button'
         className={styles.head}
-        // onClick={() =>{setIsOpen(p => !p)}}
         onClick={toggleAccordion}
       >
         <div className={styles.textWrapper}>
@@ -103,7 +93,7 @@ export const Accordion = (
           </div>
         </div>
 
-        <div className={styles.chevron}>
+        <div className={cn(styles.chevron, isOpen ? styles.rotate : '')}>
           {renderIcon()}
         </div>
       </button>
